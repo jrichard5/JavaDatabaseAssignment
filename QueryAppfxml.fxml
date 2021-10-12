@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="QueryAppfxmlController">
+   <top>
+      <BorderPane fx:id="queryPnae" BorderPane.alignment="CENTER">
+         <top>
+            <HBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="predefinedLabel" text="Predefined Queries:  ">
+                     <HBox.margin>
+                        <Insets right="8.0" />
+                     </HBox.margin></Label>
+                  <ComboBox fx:id="predefinedBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#comboBoxAction" promptText="Select a Query" HBox.hgrow="ALWAYS" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <center>
+            <HBox prefHeight="125.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="customLabel" alignment="TOP_RIGHT" prefWidth="135.0" text="Create Custom Query:">
+                           <VBox.margin>
+                              <Insets bottom="8.0" top="8.0" />
+                           </VBox.margin></Label>
+                        <Button fx:id="submitButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#submitClicked" text="Submit Query">
+                           <VBox.margin>
+                              <Insets top="16.0" />
+                           </VBox.margin></Button>
+                     </children>
+                  </VBox>
+                  <TextArea fx:id="customQueryText" maxHeight="-Infinity" maxWidth="-Infinity">
+                     <HBox.margin>
+                        <Insets left="8.0" />
+                     </HBox.margin></TextArea>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </BorderPane.margin>
+            </HBox>
+         </center>
+      </BorderPane>
+   </top>
+</BorderPane>
